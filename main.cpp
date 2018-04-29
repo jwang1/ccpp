@@ -67,6 +67,17 @@ int main() {
 
     cout << scientific << "scientific floating cout : " << fv << endl;
 
+
+    char c1 = 55;  // casting here?
+    cout << "char assigned with 55 is : " << c1 << endl;
+
+    char c2 = '7';
+
+    cout << "c1 == c2 : "  << (c1 == c2) << endl;
+
+    cout << "size of char : "  << sizeof(char) << ", size of wchar_t : " << sizeof(wchar_t) << endl;
+
+
     return 0;
 }
 
