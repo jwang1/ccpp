@@ -59,6 +59,8 @@ int main() {
 
     cout << "size of int : " << sizeof(INT_MAX) << ", check from INT_MIN as well : " << sizeof(INT_MIN) << endl;
 
+    cout << "the standard way to check size of int : " << sizeof(int) << endl;
+
 
     return 0;
 }
