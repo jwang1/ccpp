@@ -3,6 +3,13 @@
 
 using namespace std;
 
+
+void print(string name) {
+    cout << "name: " << name << "\n"
+         << "string.length() == " << name.length()  << "\n"
+         << "string.front() == " << name.front() << "\n";
+}
+
 int main() {
     cout << "Hello, Tic Tac Toe!" << endl;
 
@@ -21,6 +28,38 @@ int main() {
 
     // cin.ignore();
 
+    print(name);
+
+    name.append(" Smith");
+
+    print(name);
+
+
+    //----------------------------
+    // way of input integer in c++
+    //----------------------------
+
+    cout << "input an integer: ";
+
+    int nbr1;
+
+    cin >> nbr1;
+
+    cout << "your number is: " << nbr1 << endl;
+
+
+    // this is interesting
+    cout.precision(2);
+    double d1;
+    double d2;
+
+    cout << "input decimal: ";
+    cin >> d1;
+
+    cout << "input decimal: ";
+    cin >> d2;
+
+    cout << d1 << " divided by " << d2 << " is " << d1 / d2 << endl;
 
 
     return 0;
