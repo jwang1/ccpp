@@ -19,39 +19,6 @@ void checkCharWchar();
 
 void checkArray();
 
-int main() {
-    cout << "Hello, Tic Tac Toe!" << endl;
-
-    // waiting for input, but if user inputs, just ignores it, and move the the next statement (return 0)
-    // cin.ignore();
-
-    bool check = false;
-
-    // temporary skip it.
-    //    the text handling
-
-    if (check) {
-        checkText();
-    }
-
-    if (check) {
-        checkIntegerDouble();
-    }
-
-
-    if (check) {
-        checkCharWchar();
-    }
-
-    check = true;
-
-    if (check) {
-        checkArray();
-    }
-
-
-    return 0;
-}
 
 void checkCharWchar() {
     float fv = 73.4;
@@ -146,5 +113,50 @@ void checkArray() {
     cout << "initialized ints, event blank, has values : "  << intsInit[1] << endl;
 
 
+    // the following is very diff from Java's
+    int int3[3] = {1, 3, 5};
+
+    cout << "bad idea, the memory not allocated, but C/C++ still allows it : "  << int3[5] << endl;
+
+    // crashing
+    int3[5] = -1;   // BAD
+
  }
+
+
+int main() {
+    cout << "Hello, Tic Tac Toe!" << endl;
+
+    // waiting for input, but if user inputs, just ignores it, and move the the next statement (return 0)
+    // cin.ignore();
+
+    bool check = false;
+
+    // temporary skip it.
+    //    the text handling
+
+    if (check) {
+        checkText();
+    }
+
+    if (check) {
+        checkIntegerDouble();
+    }
+
+
+    if (check) {
+        checkCharWchar();
+    }
+
+    check = true;
+
+    if (check) {
+        checkArray();
+    }
+
+
+    return 0;
+}
+
+
 
