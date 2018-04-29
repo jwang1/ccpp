@@ -3,21 +3,14 @@
 #include <iomanip>
 #include <limits>
 
+#include "util.h"
+#include "classes.h"
+
 using namespace std;
 
 // https://stackoverflow.com/questions/7625105/why-cant-i-declare-a-string-in-my-program-string-is-undeclared-identifier
 // Need to have using namespace after include, but before function declarations
 
-void checkText();
-
-void print(string);
-
-
-void checkIntegerDouble();
-
-void checkCharWchar();
-
-void checkArray();
 
 
 void checkCharWchar() {
@@ -163,10 +156,15 @@ int main() {
         checkCharWchar();
     }
 
+    if (check) {
+        checkArray();
+    }
+
+
     check = true;
 
     if (check) {
-        checkArray();
+        classDrive();
     }
 
 
