@@ -61,6 +61,11 @@ int main() {
 
     cout << "the standard way to check size of int : " << sizeof(int) << endl;
 
+    float fv = 73.4;
+    cout << setprecision(6);
+    cout << fixed << "fixed floating cout : " << fv << endl;
+
+    cout << scientific << "scientific floating cout : " << fv << endl;
 
     return 0;
 }
