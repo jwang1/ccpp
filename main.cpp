@@ -121,6 +121,21 @@ void checkArray() {
     // crashing
     int3[5] = -1;   // BAD
 
+
+    // multi-dimensional array
+    string tbl[2][3] = {
+            {"cat", "dog", "bird"},
+            {"wolf", "fox", "elephant"}
+    };
+
+    for (unsigned int i = 0; i < sizeof(tbl) / sizeof(tbl[0]); i++) {
+        for (unsigned int j = 0; j < sizeof(tbl[0]) / sizeof(string); j++) {
+            cout << "tbl[" << i << "][" << j << "] = " << tbl[i][j] << " " << flush;
+        }
+
+        cout << endl;
+    }
+
  }
 
 
