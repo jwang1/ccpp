@@ -53,10 +53,10 @@ int main() {
     double d1;
     double d2;
 
-    cout << "input decimal: ";
+    cout << "input decimal: " << flush;
     cin >> d1;
 
-    cout << "input decimal: ";
+    cout << "input decimal: " << flush;
     cin >> d2;
 
     cout << d1 << " divided by " << d2 << " is " << d1 / d2 << endl;
