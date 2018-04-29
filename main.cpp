@@ -9,8 +9,15 @@ using namespace std;
 // Need to have using namespace after include, but before function declarations
 
 void checkText();
+
 void print(string);
 
+
+void checkIntegerDouble();
+
+void checkCharWchar();
+
+void checkArray();
 
 int main() {
     cout << "Hello, Tic Tac Toe!" << endl;
@@ -18,11 +25,53 @@ int main() {
     // waiting for input, but if user inputs, just ignores it, and move the the next statement (return 0)
     // cin.ignore();
 
+    bool check = false;
+
     // temporary skip it.
     //    the text handling
-    // checkText();
+
+    if (check) {
+        checkText();
+    }
+
+    if (check) {
+        checkIntegerDouble();
+    }
 
 
+    if (check) {
+        checkCharWchar();
+    }
+
+    check = true;
+
+    if (check) {
+        checkArray();
+    }
+
+
+    return 0;
+}
+
+void checkCharWchar() {
+    float fv = 73.4;
+    cout << setprecision(6);
+    cout << fixed << "fixed floating cout : " << fv << endl;
+
+    cout << scientific << "scientific floating cout : " << fv << endl;
+
+
+    char c1 = 55;  // casting here?
+    cout << "char assigned with 55 is : " << c1 << endl;
+
+    char c2 = '7';
+
+    cout << "c1 == c2 : "  << (c1 == c2) << endl;
+
+    cout << "size of char : "  << sizeof(char) << ", size of wchar_t : " << sizeof(wchar_t) << endl;
+}
+
+void checkIntegerDouble() {
     //----------------------------
     // way of input integer in c++
     //----------------------------
@@ -39,7 +88,6 @@ int main() {
     // this is interesting, set precision for cout numbers
     // cout.precision(2);
     cout << setprecision(2);
-
 
 
     double d1;
@@ -60,25 +108,6 @@ int main() {
     cout << "size of int : " << sizeof(INT_MAX) << ", check from INT_MIN as well : " << sizeof(INT_MIN) << endl;
 
     cout << "the standard way to check size of int : " << sizeof(int) << endl;
-
-    float fv = 73.4;
-    cout << setprecision(6);
-    cout << fixed << "fixed floating cout : " << fv << endl;
-
-    cout << scientific << "scientific floating cout : " << fv << endl;
-
-
-    char c1 = 55;  // casting here?
-    cout << "char assigned with 55 is : " << c1 << endl;
-
-    char c2 = '7';
-
-    cout << "c1 == c2 : "  << (c1 == c2) << endl;
-
-    cout << "size of char : "  << sizeof(char) << ", size of wchar_t : " << sizeof(wchar_t) << endl;
-
-
-    return 0;
 }
 
 void checkText() {
@@ -106,4 +135,16 @@ void print(string name) {
          << "string.length() == " << name.length()  << "\n"
          << "string.front() == " << name.front() << "\n";
 }
+
+void checkArray() {
+    int ints[3];
+
+    cout << "uninitialized ints having undertimined old values : "  << ints[1] << endl;
+
+    int intsInit[3] = {};
+
+    cout << "initialized ints, event blank, has values : "  << intsInit[1] << endl;
+
+
+ }
 
