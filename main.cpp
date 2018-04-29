@@ -1,6 +1,8 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
-    std::cout << "Hello, Tic Tac Toe!" << std::endl;
+    cout << "Hello, Tic Tac Toe!" << endl;
     return 0;
 }
