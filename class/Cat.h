@@ -15,7 +15,11 @@ private:
     int age;
 
 public:
+    Cat();
+
     Cat(string, int);
+
+    ~Cat();
 
     string getName();
 
