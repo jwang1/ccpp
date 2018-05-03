@@ -9,6 +9,8 @@
 #include "util.h"
 #include "classes.h"
 
+#include "class/gcd/Gcd.h"
+
 using namespace std;
 
 // https://stackoverflow.com/questions/7625105/why-cant-i-declare-a-string-in-my-program-string-is-undeclared-identifier
@@ -247,10 +249,21 @@ int main() {
         checkCodeReading();
     }
 
+    if (check) {
+        guessingNumber(20);
+    }
+
     check = true;
 
     if (check) {
-        guessingNumber(20);
+        Gcd gcd13_17(13, 17);
+        cout << gcd13_17.toString() <<  " is: " << gcd13_17.getGcd() << endl;
+
+        Gcd gcd12_18(12, 18);
+        cout << gcd12_18.toString() << " is: " << gcd12_18.getGcd() << endl;
+
+        Gcd gcd3_0(3, 0);
+        cout << gcd3_0.toString() << " is: " << gcd3_0.getGcd() << endl;
     }
 
 
