@@ -3,6 +3,9 @@
 #include <iomanip>
 #include <limits>
 
+#include <stdlib.h>
+#include <time.h>
+
 #include "util.h"
 #include "classes.h"
 
@@ -11,6 +14,12 @@ using namespace std;
 // https://stackoverflow.com/questions/7625105/why-cant-i-declare-a-string-in-my-program-string-is-undeclared-identifier
 // Need to have using namespace after include, but before function declarations
 
+// https://developers.google.com/edu/c++/solutions/1-4
+void checkCodeReading();
+
+int getRandomInt(int);
+
+void guessingNumber(int);
 
 
 void checkCharWchar() {
@@ -131,6 +140,76 @@ void checkArray() {
 
  }
 
+ void checkCodeReading() {
+    cout << "   1\t2\t3\t4\t5\t6\t7\t8\t9" << endl << "" << endl;
+
+    for (int i = 1; i < 10; i++) {
+        cout << i << "| ";
+
+        for (int j = 1; j < 10; j++) {
+            cout << j * i << "\t";
+        }
+
+        cout << endl;
+    }
+}
+
+int getRandomInt(int max) {
+    // avoid div/0
+    if (max == 0) {
+        return 0;
+    }
+
+    time_t v = time(NULL);
+
+    // some value like : 1525312684
+    // cout << "time(NULL) returned: " << v << endl;
+
+    srand(v);
+
+    return rand() % max  + 1;
+}
+
+int getNumberFromUser(int hint) {
+    int guess;
+
+    while (true) {
+
+        cout << "input int (0 ~ " << hint << "): " << flush;
+
+        cin >> guess;
+
+        if (!cin) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+        } else {
+            break;
+        }
+    }
+
+    return guess;
+}
+
+void guessingNumber(int max) {
+    int randInt = getRandomInt(max);
+    int guess;
+
+    do {
+        guess = getNumberFromUser(max);
+
+        if (guess < randInt) {
+            cout << "enter a bigger number than " << guess << endl;
+        } else if (guess > randInt) {
+            cout << "enter a smaller number than " << guess << endl;
+        } else {
+            cout << "You guessed the number: " << guess << endl;
+            break;
+        }
+
+    } while (randInt != guess);
+
+}
+
 
 int main() {
     cout << "Hello, Tic Tac Toe!" << endl;
@@ -161,10 +240,18 @@ int main() {
     }
 
 
+    if (check) {
+        classDrive();
+    }
+
+    if (check) {
+        checkCodeReading();
+    }
+
     check = true;
 
     if (check) {
-        classDrive();
+        guessingNumber(20);
     }
 
 
