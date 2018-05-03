@@ -3,8 +3,7 @@
 #include <iomanip>
 #include <limits>
 
-#include <stdlib.h>
-#include <time.h>
+#include <cstdlib>
 
 #include "util.h"
 #include "classes.h"
@@ -257,6 +256,5 @@ int main() {
 
     return 0;
 }
-
 
 
