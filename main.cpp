@@ -203,7 +203,6 @@ void guessingNumber(int max) {
             cout << "enter a smaller number than " << guess << endl;
         } else {
             cout << "You guessed the number: " << guess << endl;
-            break;
         }
 
     } while (randInt != guess);
