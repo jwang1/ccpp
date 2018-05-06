@@ -10,6 +10,7 @@
 #include "classes.h"
 
 #include "class/gcd/Gcd.h"
+#include "class/pointer/BasePointer.h"
 
 using namespace std;
 
@@ -22,6 +23,8 @@ void checkCodeReading();
 int getRandomInt(int);
 
 void guessingNumber(int);
+
+void processVoidPointer();
 
 
 void checkCharWchar() {
@@ -211,6 +214,22 @@ void guessingNumber(int max) {
 
 }
 
+void processVoidPointer() {
+    BasePointer bp;
+
+    char c = 'C';
+    cout <<  " character :  " << c << " increased to : ";
+    bp.increase(&c, sizeof(c));
+
+    cout << c << endl;
+
+
+    int i = 1024;
+    cout << " integer : " << i << " increased to : ";
+    bp.increase(&i, sizeof(i));
+    cout << i << endl;
+}
+
 
 int main() {
     cout << "Hello, Tic Tac Toe!" << endl;
@@ -253,8 +272,6 @@ int main() {
         guessingNumber(20);
     }
 
-    check = true;
-
     if (check) {
         Gcd gcd13_17(13, 17);
         cout << gcd13_17.toString() <<  " is: " << gcd13_17.getGcd() << endl;
@@ -264,6 +281,12 @@ int main() {
 
         Gcd gcd3_0(3, 0);
         cout << gcd3_0.toString() << " is: " << gcd3_0.getGcd() << endl;
+    }
+
+    check = true;
+
+    if (check) {
+        processVoidPointer();
     }
 
 
