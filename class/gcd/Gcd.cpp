@@ -9,6 +9,8 @@
 
 #include "Gcd.h"
 
+using namespace std;
+
 
 Gcd::Gcd(int a1, int b1) {
     a = a1;

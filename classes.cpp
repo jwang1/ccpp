@@ -5,6 +5,8 @@
 #include <iostream>
 #include "class/Cat.h"
 
+using namespace std;
+
 void classDrive() {
 
     {

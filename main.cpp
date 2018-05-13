@@ -11,6 +11,7 @@
 
 #include "class/gcd/Gcd.h"
 #include "class/pointer/BasePointer.h"
+#include "class/puzzle/ChickenRabbitCage.h"
 
 using namespace std;
 
@@ -25,6 +26,8 @@ int getRandomInt(int);
 void guessingNumber(int);
 
 void processVoidPointer();
+
+void mathPuzzle();
 
 
 void checkCharWchar() {
@@ -230,6 +233,19 @@ void processVoidPointer() {
     cout << i << endl;
 }
 
+void mathPuzzle() {
+    cout << "Enter a number for the total animals and total cost (for instance 100) " << flush;
+
+    int total;
+    cin >> total;
+
+    ChickenRabbitCage puzzle(total);
+
+    puzzle.calculateNumbers();
+
+
+}
+
 
 int main() {
     cout << "Hello, Tic Tac Toe!" << endl;
@@ -283,10 +299,14 @@ int main() {
         cout << gcd3_0.toString() << " is: " << gcd3_0.getGcd() << endl;
     }
 
+    if (check) {
+        processVoidPointer();
+    }
+
     check = true;
 
     if (check) {
-        processVoidPointer();
+        mathPuzzle();
     }
 
 

@@ -2,20 +2,18 @@
 // Created by JWang on 5/2/18.
 //
 
-#include <iostream>
-#include <sstream>
-
-using namespace std;
-
 #ifndef TICTACTOE_GCD_H
 #define TICTACTOE_GCD_H
+
+#include <iostream>
+#include <sstream>
 
 class Gcd {
 public:
     Gcd(int a, int b);
     ~Gcd();
 
-    string toString();
+    std::string toString();
 
     int getGcd();
 

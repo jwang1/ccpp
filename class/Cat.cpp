@@ -5,6 +5,8 @@
 #include <iostream>
 #include "Cat.h"
 
+using namespace std;
+
 Cat::Cat() {
     cout << "default ctor, Cat()" << endl;
 }

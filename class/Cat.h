@@ -2,26 +2,24 @@
 // Created by JWang on 4/29/18.
 //
 
-#include <string>
-
-using namespace std;
-
 #ifndef TICTACTOE_CAT_H
 #define TICTACTOE_CAT_H
 
+#include <string>
+
 class Cat {
 private:
-    string name;
+    std::string name;
     int age;
 
 public:
     Cat();
 
-    Cat(string, int);
+    Cat(std::string, int);
 
     ~Cat();
 
-    string getName();
+    std::string getName();
 
     int getAge();
 

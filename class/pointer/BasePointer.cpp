@@ -6,6 +6,8 @@
 
 #include "BasePointer.h"
 
+using namespace std;
+
 
 void BasePointer::increase(void *data, int psize) {
     if (psize == sizeof(char)) {
