@@ -29,6 +29,8 @@ void processVoidPointer();
 
 void mathPuzzle();
 
+void checkGcd();
+
 
 void checkCharWchar() {
     float fv = 73.4;
@@ -233,6 +235,17 @@ void processVoidPointer() {
     cout << i << endl;
 }
 
+void checkGcd() {
+    Gcd gcd13_17(13, 17);
+    cout << gcd13_17.toString() <<  " is: " << gcd13_17.getGcd() << endl;
+
+    Gcd gcd12_18(12, 18);
+    cout << gcd12_18.toString() << " is: " << gcd12_18.getGcd() << endl;
+
+    Gcd gcd3_0(3, 0);
+    cout << gcd3_0.toString() << " is: " << gcd3_0.getGcd() << endl;
+}
+
 void mathPuzzle() {
     cout << "Enter a number for the total animals and total cost (for instance 100) " << flush;
 
@@ -289,14 +302,8 @@ int main() {
     }
 
     if (check) {
-        Gcd gcd13_17(13, 17);
-        cout << gcd13_17.toString() <<  " is: " << gcd13_17.getGcd() << endl;
+        checkGcd();
 
-        Gcd gcd12_18(12, 18);
-        cout << gcd12_18.toString() << " is: " << gcd12_18.getGcd() << endl;
-
-        Gcd gcd3_0(3, 0);
-        cout << gcd3_0.toString() << " is: " << gcd3_0.getGcd() << endl;
     }
 
     if (check) {
